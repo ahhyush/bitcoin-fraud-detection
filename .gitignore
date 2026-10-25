@@ -1,0 +1,37 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+kaggle.json
+.kaggle/
+access_token
+
+# Python / tooling
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.cache/
+.DS_Store
+*.log
+
+# Claude Code working files
+.claude/
+**/.claude/
+CLAUDE.md
+
+# Data: only the empty folders are committed (via .gitkeep)
+data/raw/*
+data/processed/*
+!**/.gitkeep
+
+# Outputs: the notebook creates submissions/ and writes the two CSVs there
+submissions/
+reports/
+
+# Scratch work
+artifacts/
+bitcoin_fraud_detection.ipynb
+scratch_*.ipynb
